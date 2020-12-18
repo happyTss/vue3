@@ -16,7 +16,7 @@
 import HelloWorld from "./components/HelloWorld.vue";
 import Test from "./components/Test.vue";
 import Life from "./components/Life.vue";
-// import { useRouter } from 'vue-router'//页面路由必须引入,否则无法使用
+// import { useRouter ,useRoute} from 'vue-router'//页面路由必须引入,否则无法使用
 import {ref, onBeforeMount,onMounted, onBeforeUpdate,onUpdated, onBeforeUnmount,onUnmounted } from "vue";
 
 export default {
@@ -64,12 +64,15 @@ export default {
   },
   setup() {
     const id = ref(1);
-/*     const router = useRouter()
+/*    
+    const router = useRouter()
+    const route = useRoute()
     const toHome = (() => {
     router.push({
       name: 'home'
     })
-  }) */
+  }) 
+*/
     console.log("setup");
     onBeforeMount(() => {
       console.log("onBeforeMount");
